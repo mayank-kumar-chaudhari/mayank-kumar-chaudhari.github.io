@@ -22,7 +22,7 @@
 </head> 
 
 <body>	
-    <article class="resume-wrapper text-center position-relative">
+    <article id="resume-wrapper" class="resume-wrapper text-center position-relative">
 	    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
 		    <header class="resume-header pt-4 pt-md-0" id="header">
 			    <div class="media flex-column flex-md-row">
@@ -60,7 +60,10 @@
 		    </header>
 		    <div class="resume-body p-5">
 			    <section class="resume-section summary-section mb-5">
-				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
+					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+						Summary
+						<a href="/?v=t"><span class="fa-container text-center mr-2" style="float: right"><i class="fas fa-video fa-fw"></i></span></a> 
+					</h2>
 				    <div class="resume-section-content">
 					    <p class="mb-0">
 							Indian Inasitute of Technology M. Tech in Applied Physics graduate (8.53/10 CAP) with 3+ years of teaching and research experience. 
@@ -764,13 +767,23 @@
 			    </div><!--//row-->
 		    </div><!--//resume-body-->
 	    </div>
-    </article>  
+	</article>  
+	<div id="video_container">
+		<video width="320" height="240" controls>
+			<source src="https://raw.githubusercontent.com/mayank-kumar-chaudhari/mayank-kumar-chaudhari.github.io/master/intro.mp4" type="video/mp4">
+		  Your browser does not support the video tag.
+		</video> 
+	</div>
     <script>
 		var v = document.getElementsByClassName('fa-container');
 		// var v = document.getElementById("header");
 		var i = 0, x = ['#80422F', '#328998'];
 		v[v.length-1].style.setProperty('--bg', '#22A162');
 		var v = document.getElementById('scholar');
+		if(window.location.toString().endsWith('?v=t')){
+			document.getElementById('resume-wrapper').style.display = 'none';
+			document.getElementById('video_container').style.display = 'block';
+		}
 		// setInterval(function(){
 		// 	v.style.setProperty('--bg', x[i]);			
 		// 	i = (i+1)%2;

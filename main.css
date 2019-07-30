@@ -59,6 +59,20 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+#video_container{
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: #000
+}
+video{
+  width: 80%;
+  height: auto;
+}
 .mb-3 a{
   white-space: nowrap;
 }
